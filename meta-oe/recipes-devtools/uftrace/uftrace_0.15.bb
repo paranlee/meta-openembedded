@@ -10,7 +10,7 @@ DEPENDS:append:libc-musl = " argp-standalone"
 
 inherit autotools
 
-SRCREV = "04d73dc31cafef4161321e3c2443a5490ef93018"
+SRCREV = "139e3f7afb1ab8efc42983569b1e9ae697565b0f"
 SRC_URI = "git://github.com/namhyung/${BPN};branch=master;protocol=https"
 S = "${WORKDIR}/git"
 
@@ -36,7 +36,7 @@ do_configure() {
 FILES_SOLIBSDEV = ""
 FILES:${PN} += "${libdir}/*.so"
 
-COMPATIBLE_HOST = "(i.86|x86_64|aarch64|arm)"
+COMPATIBLE_HOST = "(i.86|x86_64|aarch64|arm|riscv64)"
 
 # uftrace supports armv6 and above
 COMPATIBLE_HOST:armv4 = 'null'
